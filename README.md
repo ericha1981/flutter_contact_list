@@ -1,6 +1,21 @@
 # flutter_contact_list
 
 Simple flutter app that fetches the random users from the web and display using **ListView.builder** and **ListTile** widget.
+
+<br />
+
+### Folder structure
+```
+lib
+├── models                   
+    ├── contact_model.dart        # Contact class
+├── resources                     
+    ├── contact_api_provider.dart # makes API call and serialize the response object
+├── screens                     
+    ├── contact_list.dart         # display contacts in ListView
+    ├── home.dart                 # home page
+└── main.dart                     # main entry of the app
+```
 <br />
 <br />
 
