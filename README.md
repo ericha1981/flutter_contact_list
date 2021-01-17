@@ -1,12 +1,12 @@
 # flutter_contact_list
 
-Simple flutter app that gets the random user list and display in **ListView.builder** and **ListTile** widget.
+Simple flutter app that fetches the random users from the web and display using **ListView.builder** and **ListTile** widget.
 <br />
 <br />
 
 ### Description
 
-Use the http package to make a API call to https://randomuser.me/api/?results=20 (limit to 20 users) and parse the response object to display info on the My Contact page.
+Use the http package to make the API call to https://randomuser.me/api/?results=20 (limit to 20 users) and parse the response object to display info on the My Contact page.
 <br />
 <br />
 
