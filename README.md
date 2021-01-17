@@ -2,13 +2,39 @@
 
 Simple flutter app that gets the random user list and display in **ListView.builder** and **ListTile** widget.
 
-### Desciption
+### Description
 
 Use the http package to make a API call to https://randomuser.me/api/?results=20 (limit to 20 users) and parse the response object to display info on the My Contact page.
 
 ### Main Feature
 
 Since http returns a Future object, **FutureBuilder** widget was used to read the data.
+
+```dart
+class ContactList extends StatelessWidget {
+  final ContactApiProvider _contactApiProvider = ContactApiProvider();
+
+  @override
+  Widget build(BuildContext context) {
+    Future<List<Contact>> _contact = _contactApiProvider.fetchRandomUsers();
+    return FutureBuilder<List<Contact>>(
+      future: _contact,
+      builder: (context, snapshot) {
+        if (snapshot.hasData) {
+          return _listContacts(snapshot.data);
+        } else {
+          if (snapshot.hasError) {
+            return Text('Error loading random users!');
+          }
+          return Text('Loading...');
+        }
+      }
+    );
+  }
+  ...
+}
+```
+
 
 ### Screenshot
 
