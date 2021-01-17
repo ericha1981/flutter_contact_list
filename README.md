@@ -1,14 +1,19 @@
 # flutter_contact_list
 
 Simple flutter app that gets the random user list and display in **ListView.builder** and **ListTile** widget.
+<br />
+<br />
 
 ### Description
 
 Use the http package to make a API call to https://randomuser.me/api/?results=20 (limit to 20 users) and parse the response object to display info on the My Contact page.
+<br />
+<br />
 
 ### Main Feature
 
 Since http returns a Future object, **FutureBuilder** widget was used to read the data.
+
 
 ```dart
 class ContactList extends StatelessWidget {
@@ -34,7 +39,8 @@ class ContactList extends StatelessWidget {
   ...
 }
 ```
-
+<br />
+<br />
 
 ### Screenshot
 
