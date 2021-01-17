@@ -4,7 +4,7 @@ Simple flutter app that fetches the random users from the web and display using 
 
 <br />
 
-### Folder structure
+## Folder structure
 ```
 lib
 ├── models                   
@@ -17,15 +17,13 @@ lib
 └── main.dart                     # main entry of the app
 ```
 <br />
-<br />
 
-### Description
+## Description
 
 Use the http package to make the API call to https://randomuser.me/api/?results=20 (limit to 20 users) and parse the response object to display info on the My Contact page.
 <br />
-<br />
 
-### Main Feature
+## Main Feature
 
 Since http returns a Future object, **FutureBuilder** widget was used to read the data.
 
@@ -56,7 +54,7 @@ class ContactList extends StatelessWidget {
 ```
 <br />
 
-### Screenshot
+## Screenshot
 
 Emulator: iOS (iPhone 12 Pro Max)
 
