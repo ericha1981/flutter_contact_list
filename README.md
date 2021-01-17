@@ -40,7 +40,6 @@ class ContactList extends StatelessWidget {
 }
 ```
 <br />
-<br />
 
 ### Screenshot
 
