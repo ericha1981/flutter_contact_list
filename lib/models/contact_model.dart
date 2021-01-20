@@ -14,14 +14,17 @@ class Contact {
     this.email, this.pictureLarge, this.pictureMedium, this.pictureThumbnail,
   });
 
-  Contact.fromJson(Map<String, dynamic> json)
-      : first = json['name']['first'],
-        last = json['name']['last'],
-        gender = json['gender'],
-        age = json['dob']['age'],
-        username = json['login']['username'],
-        email = json['email'],
-        pictureLarge = json['picture']['large'],
-        pictureMedium = json['picture']['medium'],
-        pictureThumbnail = json['picture']['thumbnail'];
+  factory Contact.fromJson(Map<String, dynamic> json) {
+    return Contact (
+      first: json['name']['first'],
+      last: json['name']['last'],
+      gender: json['gender'],
+      age: json['dob']['age'],
+      username: json['login']['username'],
+      email: json['email'],
+      pictureLarge: json['picture']['large'],
+      pictureMedium: json['picture']['medium'],
+      pictureThumbnail: json['picture']['thumbnail'],
+    );
+  }
 }

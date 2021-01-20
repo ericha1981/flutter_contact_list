@@ -3,21 +3,20 @@ import '../resources/contact_api_provider.dart';
 import '../models/contact_model.dart';
 
 class ContactList extends StatelessWidget {
-  final ContactApiProvider _contactApiProvider = ContactApiProvider();
-
   @override
   Widget build(BuildContext context) {
-    Future<List<Contact>> _contact = _contactApiProvider.fetchRandomUsers();
+    Future<List<Contact>> _contact = ContactApiProvider.fetchRandomUsers();
     return FutureBuilder<List<Contact>>(
       future: _contact,
       builder: (context, snapshot) {
+        if (snapshot.hasError) {
+          return Text('Error loading random users!');
+        }
+
         if (snapshot.hasData) {
           return _listContacts(snapshot.data);
         } else {
-          if (snapshot.hasError) {
-            return Text('Error loading random users!');
-          }
-          return Text('Loading...');
+          return Text('Loading...'); // Replace this with CircularProgressindicator()
         }
       }
     );
